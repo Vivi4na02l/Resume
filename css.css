@@ -16,8 +16,15 @@
     align-items: center;
 }
 
-.bgBlack {
+/* .anim {
+    display: inline-block;
+    transform-origin: center;
+} */
+
+.bgMg {
     background-color: rgb(250, 250, 250);
+} .bgBlack {
+    background-color: black;
 }
 
 #firstSection {
