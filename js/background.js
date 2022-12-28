@@ -20,32 +20,20 @@ function backgroundHexa() {
             html += `
                 <div class="iflex">
             `
+        } else if (i % 2 != 0) {
+            html += `
+                <div id="oddRow" class="iflex">
+            `
         } else {
             html += `
-                <div class="my-13 iflex">
+                <div id="evenRow" class="iflex">
             `
         }
         
-
-        if (i%2 == 0) {
-            for (let j = 0; j < details.hexaX; j++) {
-                html += `
-                    <div id="hexagon" class="mx2 hexagon"></div>
-                `
-            } 
-        } else {
-            for (let j = 0; j < details.hexaX; j++) {
-                if (j == 0) {
-                    html += `
-                        <div id="halfHexa" class="mr2 halfHexa"></div>
-                    ` 
-                } else {
-                    html += `
-                        <div id="hexagon" class="mx2 hexagon"></div>
-                    ` 
-                }
-                
-            }
+        for (let j = 0; j < details.hexaX; j++) {
+            html += `
+                <div id="hexagon" class="mx2 hexagon"></div>
+            `
         }
 
         html += `</div>`
@@ -91,13 +79,24 @@ function hexaOnScreen(W,H) {
  * @param {*} details object providing information on type of device and how many hexagons accordingly produced
  */
 function hexasSize(W,H,details) {
+    let hexaSize = W / details.hexaX
+
     for (const hexagon of document.querySelectorAll('#hexagon')) {
-        hexagon.style.width = W / details.hexaX + 'px'
-        hexagon.style.height = hexagon.style.width
+        hexagon.style.width = hexaSize + 'px'
+        hexagon.style.height = hexaSize + 'px'
     }
 
-    for (const hexagon of document.querySelectorAll('#halfHexa')) {
-        hexagon.style.width = (W / details.hexaX)/2 + 'px'
-        hexagon.style.height = hexagon.style.width.slice(0,-2) * 2 + 'px'
+    for (const row of document.querySelectorAll('#oddRow')) {
+        row.style.marginTop = -(hexaSize*0.25) + 'px'
+        row.style.marginLeft = -(hexaSize*0.5)-2 + 'px'
     }
+
+    for (const row of document.querySelectorAll('#evenRow')) {
+        row.style.marginTop = -(hexaSize*0.25) + 'px'
+    }
+
+    // for (const hexagon of document.querySelectorAll('#halfHexa')) {
+    //     hexagon.style.width = (W / details.hexaX)/2 + 'px'
+    //     hexagon.style.height = hexagon.style.width.slice(0,-2) * 2 + 'px'
+    // }
 }
