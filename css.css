@@ -35,16 +35,13 @@
 } 
 
 .bgMg {
-    background-color: rgb(250, 250, 250);
+    background-color: rgb(236, 236, 236);
+    border-style: ridge;
+    border-width: 3px;
+    border-color: #000;
 } .bgBlack {
     background-color: #000;
 }
-
-#firstSection {
-    background-color: aqua;
-}
-
-
 
 .hexagon {
     background-color: #272727;

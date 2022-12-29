@@ -8,9 +8,18 @@ function firstSectionSize() {
     let W = window.innerWidth
     let H = window.innerHeight
 
-    document.querySelector('#firstSection').style.height = H * 0.2 + 'px'
+    document.querySelector('#background').innerHTML += `
+        <div id="minigame" class="bgMg">
+            <div id="circle" class="bgBlack"></div>
+        </div>  
+    `
+
     document.querySelector('#minigame').style.height = (H * 0.2) * 0.8 + 'px'
-    document.querySelector('#minigame').style.width = W * 0.75 + 'px'
+    document.querySelector('#minigame').style.width = W * 0.8 + 'px'
+
+    document.querySelector('#minigame').style.position = 'absolute'
+    document.querySelector('#minigame').style.top = (H * 0.3) * 0.2 + 'px'
+    document.querySelector('#minigame').style.left = W * 0.1 + 'px'
 
     circleDimensions(document.querySelector('#minigame').style.height.slice(0,-2) , document.querySelector('#minigame').style.width.slice(0,-2))
 }

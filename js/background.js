@@ -9,7 +9,7 @@ function backgroundHexa() {
     let H = window.innerHeight
     document.querySelector('#background').innerHTML = ''
 
-    document.querySelector('#background').style.height = H * 0.2 + 'px'
+    document.querySelector('#background').style.height = H * 0.3 + 'px'
     document.querySelector('#background').style.width = W + 'px'
 
     let details = hexaOnScreen(W,H)
@@ -58,17 +58,17 @@ function hexaOnScreen(W,H) {
         if (H >= (W*2)*0.8) {
             //if it enters this then the device is then most likely a phone
 
-            return {device: 'non-pc', hexaX: '7', hexaY: '3'};
+            return {device: 'non-pc', hexaX: '11', hexaY: '8'};
         } else {
             //if it enters this then the device is then most likely a tablet
 
-            return {device: 'non-pc', hexaX: '10', hexaY: '3'};
+            return {device: 'non-pc', hexaX: '12', hexaY: '7'};
         }
 
     } else {
         //if it enters this then the device is then most likely a pc
 
-        return {device: 'pc', hexaX: '15', hexaY: '3'};
+        return {device: 'pc', hexaX: '15', hexaY: '5'};
     }
 }
 
