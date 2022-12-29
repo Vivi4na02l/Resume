@@ -15,10 +15,10 @@ function backgroundHexa() {
     let details = hexaOnScreen(W,H)
     let html = ''
 
-    for (let i = 0; i < details.hexaY; i++) {
+    for (let i = 0; i < parseInt(details.hexaY)+2; i++) {
         if (i == 0) {
             html += `
-                <div class="iflex">
+                <div id="firstRow" class="iflex">
             `
         } else if (i % 2 != 0) {
             html += `
@@ -58,11 +58,11 @@ function hexaOnScreen(W,H) {
         if (H >= (W*2)*0.8) {
             //if it enters this then the device is then most likely a phone
 
-            return {device: 'non-pc', hexaX: '7', hexaY: '4'};
+            return {device: 'non-pc', hexaX: '7', hexaY: '3'};
         } else {
             //if it enters this then the device is then most likely a tablet
 
-            return {device: 'non-pc', hexaX: '10', hexaY: '4'};
+            return {device: 'non-pc', hexaX: '10', hexaY: '3'};
         }
 
     } else {
@@ -95,8 +95,7 @@ function hexasSize(W,H,details) {
         row.style.marginTop = -(hexaSize*0.25) + 'px'
     }
 
-    // for (const hexagon of document.querySelectorAll('#halfHexa')) {
-    //     hexagon.style.width = (W / details.hexaX)/2 + 'px'
-    //     hexagon.style.height = hexagon.style.width.slice(0,-2) * 2 + 'px'
-    // }
+    for (const row of document.querySelectorAll('#firstRow')) {
+        row.style.marginTop = -(hexaSize*0.75) + 'px'
+    }
 }
