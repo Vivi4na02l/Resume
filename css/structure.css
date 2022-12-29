@@ -1,0 +1,68 @@
+.p0 {
+    padding: 0px;
+} .m0 {
+    margin: 0px;
+} .w100 {
+    width: 100%;
+} .w70 {
+    width: 70%;
+}
+
+/* Responsive positions */
+.dflex {
+    display: flex;
+} .iflex {
+    display: inline-flex;
+} .jcc {
+    justify-content: center;
+} .aic {
+    align-items: center;
+} .fdc {
+    flex-direction: column;
+} .fdr {
+    flex-direction: row;
+}
+
+.hideOutside {
+    overflow: hidden;
+}
+
+.mx2 {
+    margin-left: 2px;
+    margin-right: 2px;
+} .mr2 {
+    margin-right: 2px;
+} .mr5 {
+    margin-right: 5px;
+}
+
+.my-13 {
+    margin-top: -13px;
+} .my2 {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.bgMg {
+    background-color: rgb(236, 236, 236);
+    border-style: ridge;
+    border-width: 3px;
+    border-color: #000;
+} .bgBlack {
+    background-color: #000;
+}
+
+.pWhite {
+    color: #fff;
+} .p50px {
+    font-size: 70px;
+} .arialImpact {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    white-space: nowrap;
+}
+
+.hidden {
+    visibility: hidden;
+} .visible {
+    visibility: visible;
+}

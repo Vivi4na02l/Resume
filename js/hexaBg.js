@@ -7,10 +7,10 @@ window.addEventListener("resize", backgroundHexa)
 function backgroundHexa() {
     let W = window.innerWidth
     let H = window.innerHeight
-    document.querySelector('#background').innerHTML = ''
+    document.querySelector('#section1').innerHTML = ''
 
-    document.querySelector('#background').style.height = H * 0.3 + 'px'
-    document.querySelector('#background').style.width = W + 'px'
+    document.querySelector('#section1').style.height = H * 0.5 + 'px'
+    document.querySelector('#section1').style.width = W + 'px'
 
     let details = hexaOnScreen(W,H)
     let html = ''
@@ -40,7 +40,7 @@ function backgroundHexa() {
     }
 
 
-    document.querySelector('#background').innerHTML += html
+    document.querySelector('#section1').innerHTML += html
 
     hexasSize(W,H,details)
 }
@@ -58,17 +58,17 @@ function hexaOnScreen(W,H) {
         if (H >= (W*2)*0.8) {
             //if it enters this then the device is then most likely a phone
 
-            return {device: 'non-pc', hexaX: '11', hexaY: '8'};
+            return {device: 'non-pc', hexaX: '11', hexaY: '10'};
         } else {
             //if it enters this then the device is then most likely a tablet
 
-            return {device: 'non-pc', hexaX: '12', hexaY: '7'};
+            return {device: 'non-pc', hexaX: '12', hexaY: '9'};
         }
 
     } else {
         //if it enters this then the device is then most likely a pc
 
-        return {device: 'pc', hexaX: '15', hexaY: '5'};
+        return {device: 'pc', hexaX: '20', hexaY: '8'};
     }
 }
 
