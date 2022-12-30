@@ -2,19 +2,34 @@
     padding: 0px;
 } .m0 {
     margin: 0px;
-} .w100 {
-    width: 100%;
-} .w70 {
-    width: 70%;
 }
 
-/* Responsive positions */
+/* WIDTH */
+.w100 {
+    width: 100%;
+} .w80 {
+    width: 80%;
+} .w70 {
+    width: 70%;
+} .w60 {
+    width: 60%;
+} .w50 {
+    width: 50%;
+} .w40 {
+    width: 40%;
+} .w30 {
+    width: 40%;
+}
+
+/* RESPONSIVE POSITIONS */
 .dflex {
     display: flex;
 } .iflex {
     display: inline-flex;
 } .jcc {
     justify-content: center;
+} .jcsb {
+    justify-content: space-between;
 } .aic {
     align-items: center;
 } .fdc {
@@ -27,6 +42,7 @@
     overflow: hidden;
 }
 
+/* MARGINS */
 .mx2 {
     margin-left: 2px;
     margin-right: 2px;
@@ -43,6 +59,7 @@
     margin-bottom: 2px;
 }
 
+/* BACKGROUND */
 .bgMg {
     background-color: rgb(236, 236, 236);
     border-style: ridge;
@@ -50,15 +67,28 @@
     border-color: #000;
 } .bgBlack {
     background-color: #000;
+} .bgDarkGradient {
+    background-image: linear-gradient(#000, rgb(27, 27, 27));
+}
+
+/* TEXT */
+p {
+    color: rgb(224, 224, 224);
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
 .pWhite {
     color: #fff;
-} .p50px {
+} .p70px {
     font-size: 70px;
+} .p20px {
+    font-size: 20px;
 } .arialImpact {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     white-space: nowrap;
+} .pCenter {
+    text-align: center
 }
 
 .hidden {

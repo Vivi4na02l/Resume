@@ -58,17 +58,17 @@ function hexaOnScreen(W,H) {
         if (H >= (W*2)*0.8) {
             //if it enters this then the device is then most likely a phone
 
-            return {device: 'non-pc', hexaX: '11', hexaY: '10'};
+            return {device: 'non-pc', hexaX: '11', hexaY: '13'};
         } else {
             //if it enters this then the device is then most likely a tablet
 
-            return {device: 'non-pc', hexaX: '12', hexaY: '9'};
+            return {device: 'non-pc', hexaX: '12', hexaY: '12'};
         }
 
     } else {
         //if it enters this then the device is then most likely a pc
 
-        return {device: 'pc', hexaX: '20', hexaY: '8'};
+        return {device: 'pc', hexaX: '20', hexaY: '11'};
     }
 }
 

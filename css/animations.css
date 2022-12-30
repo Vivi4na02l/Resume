@@ -45,3 +45,115 @@
         transform: translateX(-100%);
     }
 }
+
+
+.coloredFrame {
+    outline-style: solid;
+    outline-color: #0f0;
+    animation: animation 15s linear infinite;
+}
+
+#imageOfMe {
+    filter: drop-shadow(0 0 10px rgb(255, 41, 41));
+    animation: shadowHue 15s linear infinite;
+} @keyframes shadowHue {
+    0% {
+        filter: drop-shadow(0 0 10px rgb(255, 41, 41));
+    } 25% {
+        filter: drop-shadow(0 0 10px rgb(0, 255, 0));
+    } 50% {
+      filter: drop-shadow(0 0 10px rgb(73, 73, 255));
+    } 100% {
+        filter: drop-shadow(0 0 10px rgb(255, 41, 41));
+    }
+}
+
+.txtHue {
+    color: rgb(255, 41, 41);
+    animation: txtHue 15s linear infinite;
+} @keyframes txtHue {
+    0% {
+        color: rgb(255, 41, 41);
+    } 25% {
+        color: rgb(0, 255, 0);
+    } 50% {
+        color: rgb(73, 73, 255);
+    } 100% {
+        color: rgb(255, 41, 41);
+    }
+}
+
+.hrHue {
+    color: rgb(255, 41, 41);
+    border-color: rgb(255, 41, 41);
+    animation: hrHue 15s linear infinite;
+} @keyframes hrHue {
+    0% {
+        color: rgb(255, 41, 41);
+        border-color: rgb(255, 41, 41);
+        background-color: rgb(255, 41, 41);
+    } 25% {
+        color: rgb(0, 255, 0);
+        border-color: rgb(0, 255, 0);
+        background-color: rgb(0, 255, 0);
+    } 50% {
+        color: rgb(73, 73, 255);
+        border-color: rgb(73, 73, 255);
+        background-color: rgb(73, 73, 255);
+    } 100% {
+        color: rgb(255, 41, 41);
+        border-color: rgb(255, 41, 41);
+        background-color: rgb(255, 41, 41);
+    }
+}
+
+#svg {
+    transition: all 0.3s;
+} #svg:hover {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.3);
+} .svgAboutMe {
+    background-color: rgb(255, 41, 41);
+    -webkit-mask: url(../assets/images/aboutme.svg) no-repeat center;
+    mask: url(../assets/images/aboutme.svg) no-repeat center;
+    animation: svgHue 15s linear infinite;
+} .svgCoding {
+    background-color: rgb(255, 41, 41);
+    -webkit-mask: url(../assets/images/coding.svg) no-repeat center;
+    mask: url(../assets/images/coding.svg) no-repeat center;
+    animation: svgHue 15s linear infinite;
+} .svgExperiences {
+    background-color: rgb(255, 41, 41);
+    -webkit-mask: url(../assets/images/experiences.svg) no-repeat center;
+    mask: url(../assets/images/experiences.svg) no-repeat center;
+    animation: svgHue 15s linear infinite;
+} @keyframes svgHue {
+    0% {
+        background-color: rgb(255, 41, 41);
+    } 25% {
+        background-color: rgb(0, 255, 0);
+    } 50% {
+        background-color: rgb(73, 73, 255);
+    } 100% {
+        background-color: rgb(255, 41, 41);
+    }
+}
+
+
+
+/* .svgHue:hover {
+    animation: svgHue 15s linear infinite;
+}
+
+@keyframes svgHue {
+    0% {
+        filter: invert(29%) sepia(35%) saturate(5564%) hue-rotate(344deg) brightness(101%) contrast(112%);
+    } 25% {
+        filter: invert(60%) sepia(42%) saturate(5928%) hue-rotate(86deg) brightness(121%) contrast(121%);
+    } 50% {
+        filter: invert(37%) sepia(63%) saturate(6966%) hue-rotate(235deg) brightness(103%) contrast(121%);
+    } 100% {
+        filter: invert(29%) sepia(35%) saturate(5564%) hue-rotate(344deg) brightness(101%) contrast(112%);
+    }
+} */
