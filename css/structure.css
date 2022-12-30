@@ -68,7 +68,7 @@
 } .bgBlack {
     background-color: #000;
 } .bgDarkGradient {
-    background-image: linear-gradient(#000, rgb(27, 27, 27));
+    background-image: linear-gradient(#000, rgb(33, 33, 33));
 }
 
 /* TEXT */
