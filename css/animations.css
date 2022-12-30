@@ -112,13 +112,13 @@
 } .notfilled {
     visibility: visible;
 } .filled .fill {
-    fill: white;
+    fill: rgb(249, 249, 249);
     transition: all 0.3s;
 } .notfilled .stroke {
     stroke: red;
     animation: svgStrokeHue 15s linear infinite;
 } .filled .stroke {
-    stroke: white;
+    stroke: rgb(249, 249, 249);
 } .svg:hover {
     -moz-transform: scale(1.1);
     -webkit-transform: scale(1.1);

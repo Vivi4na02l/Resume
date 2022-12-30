@@ -288,5 +288,22 @@ function section2(W,H) {
     
     document.querySelector('#svgFilledDiv').style.position = 'absolute'
     document.querySelector('#svgFilledDiv').style.top = document.querySelector('#svgDiv').offsetTop + 'px'
-    // document.querySelector('#svgFilledDiv').style.left = document.querySelector('#svgDiv').offsetLeft + 'px'
+    
+    section3(W,H)
 }
+
+function section3(W,H) {
+    document.querySelector('#expertiseContent').style.height = document.querySelector('#expertise').offsetHeight + 'px'
+    document.querySelector('#expertiseInfo').style.height = document.querySelector('#expertiseContent').offsetHeight + 'px'
+    document.querySelector('#expertiseContent').style.position = 'absolute'
+    document.querySelector('#expertiseContent').style.top = document.querySelector('#expertise').offsetTop + 'px'
+}
+
+window.onload = function() {
+    try {
+      TagCanvas.Start('myCanvas');
+    } catch(e) {
+      // something went wrong, hide the canvas container
+      document.getElementById('myCanvasContainer').style.display = 'none';
+    }
+};    

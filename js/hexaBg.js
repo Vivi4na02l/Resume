@@ -18,21 +18,21 @@ function backgroundHexa() {
     for (let i = 0; i < parseInt(details.hexaY)+2; i++) {
         if (i == 0) {
             html += `
-                <div id="firstRow" class="iflex">
+                <div id="firstRow" class="hideOutside iflex">
             `
         } else if (i % 2 != 0) {
             html += `
-                <div id="oddRow" class="iflex">
+                <div id="oddRow" class="hideOutside iflex">
             `
         } else {
             html += `
-                <div id="evenRow" class="iflex">
+                <div id="evenRow" class="hideOutside iflex">
             `
         }
         
         for (let j = 0; j < details.hexaX; j++) {
             html += `
-                <div id="hexagon" class="mx2 hexagon"></div>
+                <div id="hexagon" class="hideOutside mx2 hexagon"></div>
             `
         }
 
