@@ -27,24 +27,66 @@
         <!-- <button type="button" id="start">START</button> -->
     <!-- </div> -->
 
-    <div id="section1" class="hideOutside bgBlack">
-        
+    <div id="section1" class="w100 hideOutside bgBlack">
+        <span id="s1Bg">
+            
+        </span>
+
+        <span id="s1Content" class="hidden w100 dflex fdc jcc aic">
+            <p class="visible p18px pCenter">
+                <span class="outline visible txtOutlineHue pb5vh m0 p50px arialImpact ls2px">Hey, I'm </span>
+                <span class="visible txtHue pb5vh m0 p50px arialImpact ls2px">Viviana Henriques</span> <br>
+                I'm a front-end developer with a fair bit of back-end knownledge. <br>
+                I'm also a graphic designer and UX/UI designer.
+            </p>
+        </span>
     </div>
 
-    <div id="section2" class="py5vh hideOutside bgDarkGradient">
+    <span id="cornerDownRight">
+        <p class="pCorner">last updated: dec 2022</p>
+    </span>
+
+    <span id="cornerUpLeft">
+        <p class="pCorner handWritten">
+            "Doing what I love <br>
+            and loving what I do."
+        </p>
+    </span>
+
+    <div id="cornerUpRight" class="menu dflex fdr aic bgBlack">
+        <div id="divBtnPages" class="w50 dflex aic fdc">
+            <a href="#" id="experiences" class="btnPages" style="--i:0">
+                <ion-icon id="svgs" name="briefcase-outline"></ion-icon>
+            </a>
+
+            <a href="#" id="aboutMe" class="btnPages" style="--i:1">
+                <ion-icon id="svgs" name="person-outline"></ion-icon>
+            </a>
+
+            <a href="#" id="coding" class="btnPages" style="--i:2">
+                <ion-icon id="svgs" name="code-slash-outline"></ion-icon>
+            </a>
+        </div>
+
+        <div id="menuBtn" class="dflex jcc aic toggle">
+            <ion-icon name="add-outline"></ion-icon>
+        </div>
+    </div>
+
+
+    <!-- <div id="section2" class="py5vh hideOutside bgDarkGradient">
         <div id="section2Title" class="dflex fdr horizontalLoop">
             <p id="whoAmI" class="pWhite pb5vh m0 p70px arialImpact">Who am I?</p>
             <p id="whoAmI" class="pWhite pb5vh m0 p70px arialImpact">Who am I?</p>
             <p id="whoAmI" class="pWhite pb5vh m0 p70px arialImpact">Who am I?</p>
             <p id="whoAmI" class="pWhite pb5vh m0 p70px arialImpact">Who am I?</p>
             <p id="whoAmI" class="pWhite pb5vh m0 p70px arialImpact">Who am I?</p>
-            <p id="whoAmI" class="pWhite pb5vh m0 p70px arialImpact">Who am I?</p> <!-- &nbsp; &nbsp; Who am I? -->
+            <p id="whoAmI" class="pWhite pb5vh m0 p70px arialImpact">Who am I?</p> 
         </div>
 
         <div id="section2Content" class="dflex fdc jcc aic">
             <div id="imgDiv" class="w40 dflex fdc aic jcc">
                 <image id="imageOfMe" class="w70" src="assets/images/me.jpeg">
-                <!-- <span id="imageFrame" class="coloredFrame"></span> -->
             </div>
 
             <span class="w70" id="nonPcHr">
@@ -91,7 +133,7 @@
 
             </div>
 
-            <div id="expertiseTitles">
+            <div class="w40 dflex jcc" id="expertiseTitles">
                 <canvas id="myCanvas">
                     <ul id="tags">
                         <li><a href="#" target="_blank">HTML, CSS</a></li>
@@ -112,11 +154,15 @@
                 </canvas>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <script src="js/hexaBg.js"></script>
-    <script src="js/resume.js"></script>
-    <script src="js/minigame.js"></script>
+    <!-- ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script src="js/section1.js"></script>
+    <script src="js/corners.js"></script>
+    <!-- <script src="js/resume.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
     <script src="js/jquery.tagcanvas.js"></script>
 </body>

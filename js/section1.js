@@ -7,15 +7,14 @@ window.addEventListener("resize", backgroundHexa)
 function backgroundHexa() {
     let W = window.innerWidth
     let H = window.innerHeight
-    document.querySelector('#section1').innerHTML = ''
 
-    document.querySelector('#section1').style.height = H * 0.5 + 'px'
-    document.querySelector('#section1').style.width = W + 'px'
+    document.querySelector('#s1Bg').style.height = H + 'px'
 
     let details = hexaOnScreen(W,H)
+
     let html = ''
 
-    for (let i = 0; i < parseInt(details.hexaY)+2; i++) {
+    for (let i = 0; i < Math.floor(details.hexaY); i++) {
         if (i == 0) {
             html += `
                 <div id="firstRow" class="hideOutside iflex">
@@ -39,10 +38,10 @@ function backgroundHexa() {
         html += `</div>`
     }
 
-
-    document.querySelector('#section1').innerHTML += html
-
+    document.querySelector('#s1Bg').innerHTML = html
     hexasSize(W,H,details)
+    hexasPositions(W,H,details)
+    s1Content(W,H)
 }
 
 /**
@@ -52,23 +51,37 @@ function backgroundHexa() {
  * @returns an object providing the information necessary to know what device is using the website
  */
 function hexaOnScreen(W,H) {
-    if (H > W) {
-        //if the dimensions are within this if then it's most likely a non-pc device
+    let nbrHexa, hexaSize, nbrRows
+
+    if (W > H*1.9) {
+        //if it enters this "if" then the device is most likely a pc
+
+        nbrHexa = 20
+        hexaSize = W / nbrHexa
+        nbrRows = H / (hexaSize*0.75) + 2
+
+        return {device: 'pc', hexaX: nbrHexa, hexaY: nbrRows};
+
+    } else {
+        //if the dimensions are within this "if" then it's most likely a non-pc device
 
         if (H >= (W*2)*0.8) {
             //if it enters this then the device is then most likely a phone
 
-            return {device: 'non-pc', hexaX: '11', hexaY: '13'};
+            nbrHexa = 8
+            hexaSize = W / nbrHexa
+            nbrRows = H / (hexaSize*0.75) + 2
+
+            return {device: 'non-pc', hexaX: nbrHexa, hexaY: nbrRows};
         } else {
             //if it enters this then the device is then most likely a tablet
 
-            return {device: 'non-pc', hexaX: '12', hexaY: '12'};
+            nbrHexa = 10
+            hexaSize = W / nbrHexa
+            nbrRows = H / (hexaSize*0.75) + 2
+
+            return {device: 'non-pc', hexaX: nbrHexa, hexaY: nbrRows};
         }
-
-    } else {
-        //if it enters this then the device is then most likely a pc
-
-        return {device: 'pc', hexaX: '20', hexaY: '11'};
     }
 }
 
@@ -85,6 +98,10 @@ function hexasSize(W,H,details) {
         hexagon.style.width = hexaSize + 'px'
         hexagon.style.height = hexaSize + 'px'
     }
+}
+
+function hexasPositions(W,H,details) {
+    let hexaSize = W / details.hexaX
 
     for (const row of document.querySelectorAll('#oddRow')) {
         row.style.marginTop = -(hexaSize*0.25) + 'px'
@@ -98,4 +115,11 @@ function hexasSize(W,H,details) {
     for (const row of document.querySelectorAll('#firstRow')) {
         row.style.marginTop = -(hexaSize*0.75) + 'px'
     }
+}
+
+function s1Content(W,H) {
+    document.querySelector('#s1Content').style.height = H + 'px'
+    document.querySelector('#s1Content').style.position = 'absolute'
+    document.querySelector('#s1Content').style.top = 0 + 'px'
+    document.querySelector('#s1Content').style.left = 0 + 'px'
 }

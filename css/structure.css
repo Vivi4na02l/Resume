@@ -24,8 +24,12 @@
     justify-content: center;
 } .jcsb {
     justify-content: space-between;
+} .jce {
+    justify-content: end;
 } .aic {
     align-items: center;
+} .aie {
+    align-items: end;
 } .fdc {
     flex-direction: column;
 } .fdr {
@@ -34,10 +38,10 @@
 
 .hideOutside {
     overflow: hidden;
-} * :not(#whoAmI) {
-    overflow-x: hidden;
-} #minigame {
-    overflow-y: hidden;
+}
+
+* :not(#whoAmI) {
+    overflow: hidden;
 }
 
 .opa14 {
@@ -78,7 +82,7 @@
 
 /* BACKGROUND */
 .bgMg {
-    background-color: rgb(224, 224, 224);
+    background-color: rgb(202, 202, 202);
     border-style: ridge;
     border-width: 3px;
     border-color: #000;
@@ -91,22 +95,26 @@
 } .bgTransp {
     background-color: transparent;
 } .bgWhite {
-    background-color: rgb(224, 224, 224);
+    background-color: rgb(202, 202, 202);
 }
 
 /* TEXT */
 p {
-    color: rgb(224, 224, 224);
+    color: rgb(202, 202, 202);
     font-size: 15px;
     font-family: Verdana, Geneva, Tahoma, sans-serif, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
 .pWhite {
-    color: rgb(224, 224, 224);
+    color: rgb(202, 202, 202);
 } .p70px {
     font-size: 70px;
+} .p50px {
+    font-size: 7vh;
 } .p20px {
-    font-size: 20px;
+    font-size: 2vh;
+} .p18px {
+    font-size: 18px;
 } .arialImpact {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     white-space: nowrap;
@@ -114,6 +122,18 @@ p {
     text-align: center
 } .pFullSize {
     font-size: 24vw;
+} .ls2px {
+    letter-spacing: 1.5px;
+} .pCorner {
+    font-size: 1.2vh;
+} .handWritten {
+    font-family: cursive;
+}
+
+.outline {
+    color: rgba(255, 255, 255, 0);
+    -webkit-text-stroke: 1px rgb(202, 202, 202);
+    text-stroke: 1px rgb(202, 202, 202);
 }
 
 .hidden {

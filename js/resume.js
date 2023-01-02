@@ -28,25 +28,7 @@ function section1Size() {
     document.querySelector('#section1Content').style.position = 'absolute'
     document.querySelector('#section1Content').style.top = 0 + 'px'
 
-    circleDimensions(document.querySelector('#minigame').style.height.slice(0,-2) , document.querySelector('#minigame').style.width.slice(0,-2))
     section2(W,H)
-}
-
-/**
- * Function that creates the circle and its position
- * @param {*} divH height of the game div
- */
-function circleDimensions(divH, divW) {
-    const circle = document.querySelector('#circle')
-
-    circle.style.borderRadius = '50%'
-    circle.style.width = divH * 0.2 + 'px'
-    circle.style.height = circle.style.width
-
-    circle.style.position = 'relative'
-
-    circle.style.top = divH - parseInt(circle.style.width.slice(0,-2)) + 'px'
-    circle.style.left = divW*0.2 + 'px'
 }
 
 function section2(W,H) {
@@ -295,6 +277,7 @@ function section2(W,H) {
 function section3(W,H) {
     document.querySelector('#expertiseContent').style.height = document.querySelector('#expertise').offsetHeight + 'px'
     document.querySelector('#expertiseInfo').style.height = document.querySelector('#expertiseContent').offsetHeight + 'px'
+
     document.querySelector('#expertiseContent').style.position = 'absolute'
     document.querySelector('#expertiseContent').style.top = document.querySelector('#expertise').offsetTop + 'px'
 }
