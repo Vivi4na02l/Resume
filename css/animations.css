@@ -8,19 +8,22 @@
     transform: rotate(315deg);
     background-color: #272727;
     color: #fff;
+    outline-style: solid;
+    outline-width: 0.5px;
+    outline-color: #fff;
 } .btnPages {
+    opacity: 0;
     background-color: #fff;
+    color: #272727;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* outline-style: solid;
-    outline-width: 2px;
-    outline-color: rgb(255, 41, 41);
-    animation: bgHue 15s linear infinite; */
+    animation: fadeOut 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
 } .btnPages.active {
-    background-color: rgb(255, 41, 41);
-    animation: bgHue 4s linear infinite;
+    background-color: #272727;
+    color: #fff;
+    filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.437));
 } @keyframes bgHue {
     0% {
         background-color: rgb(255, 41, 41);
@@ -31,7 +34,29 @@
     } 100% {
         background-color: rgb(255, 41, 41);
     }
-}
+} #experiences.appear {
+    animation: fadeIn 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
+} #aboutMe.appear {
+    animation: fadeIn 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
+    animation-delay: 0.1s;
+} #coding.appear {
+    animation: fadeIn 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
+    animation-delay: 0.2s;
+} @keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {   
+    opacity: 1;
+  }
+} @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {   
+      opacity: 0;
+    }
+  }
 
 
 /* .menu li {

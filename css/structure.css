@@ -24,8 +24,8 @@
     justify-content: center;
 } .jcsb {
     justify-content: space-between;
-} .jce {
-    justify-content: end;
+} .jcse {
+    justify-content: space-evenly
 } .aic {
     align-items: center;
 } .aie {

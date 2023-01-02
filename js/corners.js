@@ -13,6 +13,10 @@ document.querySelector('.toggle').addEventListener('click', () => {
     for (const svgs of document.querySelectorAll("#svgs")) {
         svgs.classList.toggle('active')
     }
+
+    for (const btnPages of document.querySelectorAll('.btnPages')) {
+        btnPages.classList.toggle('appear')
+    }
 })
 
 for (const btnPages of document.querySelectorAll('.btnPages')) {
@@ -78,8 +82,12 @@ function checkScreenSize() {
         }
     }
 
+    document.querySelector('#divBtnPages').style.height = document.querySelector('#cornerUpRight').style.height
+
     for (const btnPages of document.querySelectorAll('.btnPages')) {
         btnPages.style.width = document.querySelector('#menuBtn').style.width.slice(0, -2) * 0.8 + 'px'
         btnPages.style.height = document.querySelector('.btnPages').style.width
     }
+
+    document.querySelector('#aboutMe').style.marginRight = document.querySelector('#aboutMe').style.width
 }
