@@ -26,12 +26,24 @@ for (const btnPages of document.querySelectorAll('.btnPages')) {
         if (btnPages.id == "experiences") {
             document.querySelector('#aboutMe').classList.remove('active')
             document.querySelector('#coding').classList.remove('active')
+
         } else if (btnPages.id == "aboutMe") {
             document.querySelector('#experiences').classList.remove('active')
             document.querySelector('#coding').classList.remove('active')
+            
+            document.querySelector('#section2').classList.remove('hidden')
+            document.querySelector('#section2').classList.add('showing')
+
         } else {
             document.querySelector('#aboutMe').classList.remove('active')
             document.querySelector('#experiences').classList.remove('active')
+        }
+
+        setInterval(function () {document.querySelector('#section1').classList.add(hidden)}, 1000);
+
+        if (document.querySelector('#section1').classList.contains("showing")) {
+            document.querySelector('#section1').classList.remove('showing')
+            document.querySelector('#section1').classList.add('notShowing')
         }
     })
 }
